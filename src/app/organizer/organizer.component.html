@@ -12,7 +12,7 @@
           <strong>{{ i + 1 }}</strong>
           {{ task.title }}
         </span>
-        <button class="btn btn-primary" (click)="remove(task)">Remove</button>
+        <button class="btn" (click)="remove(task)">Remove</button>
       </li>
     </ul>
     <ng-template #noTasks>
@@ -23,13 +23,7 @@
   <footer>
     <form (ngSubmit)="submit()" [formGroup]="form">
       <input type="text" formControlName="title" />
-      <button
-        type="submit"
-        class="btn btn-primary btn-block"
-        [disabled]="form.invalid"
-      >
-        Add
-      </button>
+      <button type="submit" class="btn" [disabled]="form.invalid">Add</button>
     </form>
   </footer>
 </section>
